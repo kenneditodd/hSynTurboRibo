@@ -19,8 +19,8 @@ salmon -v
 # note this same sample has other lanes but this should be sufficient to check
 salmon quant --libType A \
              --index /research/labs/neurology/fryer/projects/references/mouse/salmonIndexGRCm39 \
-             --mates1 /research/labs/neurology/fryer/m214960/mouseTBI/rawData/SRR19850635_1.fastq.gz \
-             --mates2 /research/labs/neurology/fryer/m214960/mouseTBI/rawData/SRR19850635_2.fastq.gz \
+             --mates1 /research/labs/neurology/fryer/projects/hSynTurboRibo/WT_PS19_P0_short_read/01.RawData/WP_1_Input/WP_1_Input_1.fq.gz \
+             --mates2 /research/labs/neurology/fryer/projects/hSynTurboRibo/WT_PS19_P0_short_read/01.RawData/WP_1_Input/WP_1_Input_2.fq.gz \
              --output ../../refs/transcript_quant \
              --threads 15 \
              --validateMappings
@@ -36,12 +36,12 @@ salmon quant --libType A \
 # IU = inward unstranded
 
 # Job stats
-# State: COMPLETED (exit code 0)
-# Nodes: 1
-# Cores per node: 16
-# CPU Utilized: 00:28:37
-# CPU Efficiency: 76.65% of 00:37:20 core-walltime
-# Job Wall-clock time: 00:02:20
-# Memory Utilized: 1.69 GB
-# Memory Efficiency: 16.88% of 10.00 GB
+#State: COMPLETED (exit code 0)
+#Nodes: 1
+#Cores per node: 16
+#CPU Utilized: 00:24:10
+#CPU Efficiency: 64.27% of 00:37:36 core-walltime
+#Job Wall-clock time: 00:02:21
+#Memory Utilized: 1.67 GB
+#Memory Efficiency: 16.75% of 10.00 GB
 

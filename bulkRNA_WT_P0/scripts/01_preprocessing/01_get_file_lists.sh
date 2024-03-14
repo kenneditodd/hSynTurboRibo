@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# Get fastq file list
-# There are 8 fastq files per sample
-# Each sample has R1 and R2 on all 4 lanes
-cd /research/labs/neurology/fryer/m214960/mouseTBI/rawData
-out=/research/labs/neurology/fryer/m214960/mouseTBI/refs/fastq_file_list.txt
-ls -1 | grep .fastq.gz > $out
+# get sample list
+cd /research/labs/neurology/fryer/projects/hSynTurboRibo/WT_PS19_P0_short_read/01.RawData
+out=/research/labs/neurology/fryer/m214960/hSynTurboRibo/bulkRNA_WT_P0/refs/sample_file_list.txt
+ls -1 | grep WP > $out
 
-# Get sample file list
-cd /research/labs/neurology/fryer/m214960/mouseTBI/rawData
-out=/research/labs/neurology/fryer/m214960/mouseTBI/refs/sample_file_list.txt
-ls -1 | grep _1.fastq.gz > $out
+# get fastq list
+out=/research/labs/neurology/fryer/m214960/hSynTurboRibo/bulkRNA_WT_P0/refs/fastq_file_list.txt
+find ~+ -type f -regex ".+fq.gz" | grep WP > $out

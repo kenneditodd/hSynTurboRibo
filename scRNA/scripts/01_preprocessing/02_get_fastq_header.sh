@@ -3,13 +3,11 @@
 # Redirect output to save.
 
 # set var
-prefix="/research/labs/neurology/fryer/projects/hSynTurboRibo/PS19_P0_snRNAseq/01.RawData/"
-files="../../refs/fastq_file_list.txt"
+files=/research/labs/neurology/fryer/m214960/hSynTurboRibo/scRNA/refs/fastq_file_list.txt
 
 # print fastq file name + header
-cat $files | while read suffix
+cat $files | while read file
 do
-  file=$($prefix$suffix)
   header=$(zcat $file | head -1)
   echo -n $file && echo -ne '\t' && echo $header
 done
