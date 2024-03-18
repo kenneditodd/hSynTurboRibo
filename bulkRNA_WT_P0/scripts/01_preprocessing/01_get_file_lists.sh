@@ -8,3 +8,7 @@ ls -1 | grep WP > $out
 # get fastq list
 out=/research/labs/neurology/fryer/m214960/hSynTurboRibo/bulkRNA_WT_P0/refs/fastq_file_list.txt
 find ~+ -type f -regex ".+fq.gz" | grep WP > $out
+
+# get R1 fastq list
+out=/research/labs/neurology/fryer/m214960/hSynTurboRibo/bulkRNA_WT_P0/refs/R1_fastq_file_list.txt
+find ~+ -type f -regex ".+fq.gz" | grep WP | grep _1.fq.gz > $out

@@ -1,0 +1,206 @@
+{
+    "DIRECTORIES",
+    "rawReads" : "/research/labs/neurology/fryer/projects/hSynTurboRibo/WT_PS19_P0_short_read/01.RawData/",
+    "rawQC" : "rawQC/",
+    "trimmedReads" : "trimmedReads/",
+    "trimmedQC" : "trimmedQC/",
+    "starAligned" : "starAligned/",
+    "featureCounts" : "featureCounts/",
+    "genomeDir" : "refs/starGenomeDir/",
+
+    "FILES",
+    "Mmusculus.gtf" : "/research/labs/neurology/fryer/projects/references/mouse/refdata-gex-mm10-2020-A/genes/genes.gtf",
+    "Mmusculus.fa" : "/research/labs/neurology/fryer/projects/references/mouse/refdata-gex-mm10-2020-A/fasta/genome.fa",
+
+    "SAMPLE INFORMATION",
+    "allSamples": ['WP_11_Final', 'WP_11_Input', 'WP_13_Final', 'WP_13_Input', 'WP_14_Final', 'WP_14_Input', 'WP_15_Final', 'WP_15_Input', 'WP_16_Final', 'WP_16_Input', 'WP_17_Input', 'WP_18_Final', 'WP_18_Input', 'WP_19_Final', 'WP_19_Input', 'WP_1_Final', 'WP_1_Input', 'WP_20_Final', 'WP_20_Input', 'WP_21_Final', 'WP_21_Input', 'WP_22_Final', 'WP_22_Input', 'WP_2_Final', 'WP_2_Input', 'WP_3_Final', 'WP_3_Input', 'WP_4_Final', 'WP_4_Input', 'WP_5_Final', 'WP_5_Input', 'WP_7_Final', 'WP_7_Input', 'WP_8_Final', 'WP_8_Input', 'WP_9_Final', 'WP_9_Input'],
+    "read": ['1', '2'],
+
+    "CLUSTER INFORMATION",
+    "threads" : "20",
+
+    "WP_11_Final":{
+        "read1": "WP_11_Final_1.fq.gz",
+        "read2": "WP_11_Final_2.fq.gz"
+        },
+
+    "WP_11_Input":{
+        "read1": "WP_11_Input_1.fq.gz",
+        "read2": "WP_11_Input_2.fq.gz"
+        },
+
+    "WP_13_Final":{
+        "read1": "WP_13_Final_1.fq.gz",
+        "read2": "WP_13_Final_2.fq.gz"
+        },
+
+    "WP_13_Input":{
+        "read1": "WP_13_Input_1.fq.gz",
+        "read2": "WP_13_Input_2.fq.gz"
+        },
+
+    "WP_14_Final":{
+        "read1": "WP_14_Final_1.fq.gz",
+        "read2": "WP_14_Final_2.fq.gz"
+        },
+
+    "WP_14_Input":{
+        "read1": "WP_14_Input_1.fq.gz",
+        "read2": "WP_14_Input_2.fq.gz"
+        },
+
+    "WP_15_Final":{
+        "read1": "WP_15_Final_1.fq.gz",
+        "read2": "WP_15_Final_2.fq.gz"
+        },
+
+    "WP_15_Input":{
+        "read1": "WP_15_Input_1.fq.gz",
+        "read2": "WP_15_Input_2.fq.gz"
+        },
+
+    "WP_16_Final":{
+        "read1": "WP_16_Final_1.fq.gz",
+        "read2": "WP_16_Final_2.fq.gz"
+        },
+
+    "WP_16_Input":{
+        "read1": "WP_16_Input_1.fq.gz",
+        "read2": "WP_16_Input_2.fq.gz"
+        },
+
+    "WP_17_Input":{
+        "read1": "WP_17_Input_1.fq.gz",
+        "read2": "WP_17_Input_2.fq.gz"
+        },
+
+    "WP_18_Final":{
+        "read1": "WP_18_Final_1.fq.gz",
+        "read2": "WP_18_Final_2.fq.gz"
+        },
+
+    "WP_18_Input":{
+        "read1": "WP_18_Input_1.fq.gz",
+        "read2": "WP_18_Input_2.fq.gz"
+        },
+
+    "WP_19_Final":{
+        "read1": "WP_19_Final_1.fq.gz",
+        "read2": "WP_19_Final_2.fq.gz"
+        },
+
+    "WP_19_Input":{
+        "read1": "WP_19_Input_1.fq.gz",
+        "read2": "WP_19_Input_2.fq.gz"
+        },
+
+    "WP_1_Final":{
+        "read1": "WP_1_Final_1.fq.gz",
+        "read2": "WP_1_Final_2.fq.gz"
+        },
+
+    "WP_1_Input":{
+        "read1": "WP_1_Input_1.fq.gz",
+        "read2": "WP_1_Input_2.fq.gz"
+        },
+
+    "WP_20_Final":{
+        "read1": "WP_20_Final_1.fq.gz",
+        "read2": "WP_20_Final_2.fq.gz"
+        },
+
+    "WP_20_Input":{
+        "read1": "WP_20_Input_1.fq.gz",
+        "read2": "WP_20_Input_2.fq.gz"
+        },
+
+    "WP_21_Final":{
+        "read1": "WP_21_Final_1.fq.gz",
+        "read2": "WP_21_Final_2.fq.gz"
+        },
+
+    "WP_21_Input":{
+        "read1": "WP_21_Input_1.fq.gz",
+        "read2": "WP_21_Input_2.fq.gz"
+        },
+
+    "WP_22_Final":{
+        "read1": "WP_22_Final_1.fq.gz",
+        "read2": "WP_22_Final_2.fq.gz"
+        },
+
+    "WP_22_Input":{
+        "read1": "WP_22_Input_1.fq.gz",
+        "read2": "WP_22_Input_2.fq.gz"
+        },
+
+    "WP_2_Final":{
+        "read1": "WP_2_Final_1.fq.gz",
+        "read2": "WP_2_Final_2.fq.gz"
+        },
+
+    "WP_2_Input":{
+        "read1": "WP_2_Input_1.fq.gz",
+        "read2": "WP_2_Input_2.fq.gz"
+        },
+
+    "WP_3_Final":{
+        "read1": "WP_3_Final_1.fq.gz",
+        "read2": "WP_3_Final_2.fq.gz"
+        },
+
+    "WP_3_Input":{
+        "read1": "WP_3_Input_1.fq.gz",
+        "read2": "WP_3_Input_2.fq.gz"
+        },
+
+    "WP_4_Final":{
+        "read1": "WP_4_Final_1.fq.gz",
+        "read2": "WP_4_Final_2.fq.gz"
+        },
+
+    "WP_4_Input":{
+        "read1": "WP_4_Input_1.fq.gz",
+        "read2": "WP_4_Input_2.fq.gz"
+        },
+
+    "WP_5_Final":{
+        "read1": "WP_5_Final_1.fq.gz",
+        "read2": "WP_5_Final_2.fq.gz"
+        },
+
+    "WP_5_Input":{
+        "read1": "WP_5_Input_1.fq.gz",
+        "read2": "WP_5_Input_2.fq.gz"
+        },
+
+    "WP_7_Final":{
+        "read1": "WP_7_Final_1.fq.gz",
+        "read2": "WP_7_Final_2.fq.gz"
+        },
+
+    "WP_7_Input":{
+        "read1": "WP_7_Input_1.fq.gz",
+        "read2": "WP_7_Input_2.fq.gz"
+        },
+
+    "WP_8_Final":{
+        "read1": "WP_8_Final_1.fq.gz",
+        "read2": "WP_8_Final_2.fq.gz"
+        },
+
+    "WP_8_Input":{
+        "read1": "WP_8_Input_1.fq.gz",
+        "read2": "WP_8_Input_2.fq.gz"
+        },
+
+    "WP_9_Final":{
+        "read1": "WP_9_Final_1.fq.gz",
+        "read2": "WP_9_Final_2.fq.gz"
+        },
+
+    "WP_9_Input":{
+        "read1": "WP_9_Input_1.fq.gz",
+        "read2": "WP_9_Input_2.fq.gz"
+        }
+}

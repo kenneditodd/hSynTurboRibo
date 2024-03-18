@@ -4,22 +4,23 @@
 #SBATCH --tasks 30
 #SBATCH --mail-user todd.kennedi@mayo.edu
 #SBATCH --mail-type END,FAIL
-#SBATCH --output logs/%x.%N.%j.stdout
+#SBATCH --output logs/%x.%j.stdout
 #SBATCH --error logs/%x.%j.stderr
 #SBATCH --partition cpu-short
-#SBATCH --time 4:00:00 ## HH:MM:SS
+#SBATCH --time 8:00:00 ## HH:MM:SS
 
 # activate conda environment
 source $HOME/.bash_profile
-conda activate meningitis
+conda activate turboribo
 
 # change directory to raw reads
-cd /research/labs/neurology/fryer/m214960/mouseTBI/rawReads
+cd /research/labs/neurology/fryer/projects/hSynTurboRibo/WT_PS19_P0_short_read/01.RawData
 
 # run raw fastqc
-fastqc --threads 30 --outdir ../rawQC *.fastq.gz
+out=/research/labs/neurology/fryer/m214960/hSynTurboRibo/bulkRNA_WT_P0/rawQC
+fastqc --threads 30 --outdir $out WP*/WP*.fq.gz
 
 # multiqc
-cd ../rawQC
+cd /research/labs/neurology/fryer/m214960/hSynTurboRibo/bulkRNA_WT_P0/rawQC
 multiqc *.zip --interactive --filename raw_reads_multiqc
 
