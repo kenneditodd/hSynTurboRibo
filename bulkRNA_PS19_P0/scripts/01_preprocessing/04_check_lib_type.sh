@@ -34,14 +34,3 @@ salmon quant --libType A \
 # Results
 # Automatically detected most likely library type as IU
 # IU = inward unstranded
-
-# Job stats
-#State: COMPLETED (exit code 0)
-#Nodes: 1
-#Cores per node: 16
-#CPU Utilized: 00:24:10
-#CPU Efficiency: 64.27% of 00:37:36 core-walltime
-#Job Wall-clock time: 00:02:21
-#Memory Utilized: 1.67 GB
-#Memory Efficiency: 16.75% of 10.00 GB
-

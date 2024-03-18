@@ -17,10 +17,10 @@ conda activate turboribo
 cd /research/labs/neurology/fryer/projects/hSynTurboRibo/WT_PS19_P0_short_read/01.RawData
 
 # run raw fastqc
-out=/research/labs/neurology/fryer/m214960/hSynTurboRibo/bulkRNA_WT_P0/rawQC
-fastqc --threads 30 --outdir $out WP*/WP*.fq.gz
+out=/research/labs/neurology/fryer/m214960/hSynTurboRibo/bulkRNA_PS19_P0/rawQC
+fastqc --threads 30 --outdir $out PP*/PP*.fq.gz
 
 # multiqc
-cd /research/labs/neurology/fryer/m214960/hSynTurboRibo/bulkRNA_WT_P0/rawQC
+cd /research/labs/neurology/fryer/m214960/hSynTurboRibo/bulkRNA_PS19_P0/rawQC
 multiqc *.zip --interactive --filename raw_reads_multiqc
 
