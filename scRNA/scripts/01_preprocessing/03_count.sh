@@ -5,7 +5,7 @@
 #SBATCH --output logs/%x.%j.stdout
 #SBATCH --error logs/%x.%j.stderr
 #SBATCH --partition cpu-med
-#SBATCH --time 08:00:00 ## HH:MM:SS
+#SBATCH --time 24:00:00 ## HH:MM:SS
 #SBATCH --propagate=NONE
 
 # change directory to your desired output folder
