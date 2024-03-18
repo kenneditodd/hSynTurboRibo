@@ -5,19 +5,19 @@ outfile = open('../../refs/config.json', 'w')
 
 # get all file names
 allSamples = list()
-read = ["R1", "R2"]
+read = ["1", "2"]
 numSamples = 0
 
 with open('../../refs/sample_file_list.txt', 'r') as infile:
     for line in infile:
         numSamples += 1
         sample = line.strip()
-        allSamples.append(sample.replace("_1.fastq.gz", ""))
+        allSamples.append(sample)
 
 # create header and write to outfile
 header = '''{{
     "DIRECTORIES",
-    "rawReads" : "rawReads/",
+    "rawReads" : "/research/labs/neurology/fryer/projects/hSynTurboRibo/WT_PS19_P0_short_read/01.RawData/",
     "rawQC" : "rawQC/",
     "trimmedReads" : "trimmedReads/",
     "trimmedQC" : "trimmedQC/",
@@ -47,9 +47,9 @@ with open('../../refs/sample_file_list.txt', 'r') as infile:
 
         # store filename
         sample = line.strip()
-        read1 = sample
-        read2 = sample.replace("1.fastq.gz", "2.fastq.gz")
-        baseName = sample.replace("_1.fastq.gz", "")
+        baseName = sample
+        read1 = sample + "_1.fq.gz"
+        read2 = sample + "_2.fq.gz"
 
         # break down fastq file info
         # @A00127:312:HVNLJDSXY:2:1101:2211:1000
