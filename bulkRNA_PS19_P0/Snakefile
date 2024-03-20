@@ -27,7 +27,8 @@ rule all:
 #-----------------------------------------------------------------------------------------
 rule index_genome:
 	input:
-		fa = config["Mmusculus.fa"],
+		fa1 = config["Mmusculus.fa"],
+		fa2 = config["TgMAPT.fa"],
 		gtf = config["Mmusculus.gtf"]
 	output:
 		starIndex = directory(config["genomeDir"]),
@@ -36,7 +37,7 @@ rule index_genome:
 		threads = config["threads"]
 	shell:
 		"""
-		STAR --runMode genomeGenerate --runThreadN {params.threads} --genomeFastaFiles {input.fa} --sjdbGTFfile {input.gtf} --genomeDir {params.genomeDir}
+		STAR --runMode genomeGenerate --runThreadN {params.threads} --genomeFastaFiles {input.fa1} {input.fa2} --sjdbGTFfile {input.gtf} --genomeDir {params.genomeDir}
 		"""
 
 
