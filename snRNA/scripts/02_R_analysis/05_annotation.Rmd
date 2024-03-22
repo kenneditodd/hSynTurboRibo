@@ -97,7 +97,7 @@ u3
 ```{r save_unannotated_umap, echo=FALSE}
 u1
 path <- paste0("../../results/UMAP/unannotated_clusters_colored_by_clusters")
-saveToPDF(paste0(path, ".pdf"), width = 6, height = 4)
+saveToPDF(paste0(path, ".pdf"), width = 6, height = 5)
 dev.off()
 
 u3
@@ -144,7 +144,7 @@ FeaturePlot(mouse.unannotated,
             features = "cell.complexity") + 
   scale_colour_gradientn(colours = c("blue","lightblue","yellow","orange","red"))
 
-# UMAP Ttr expression
+# UMAP Eno2 expression
 FeaturePlot(mouse.unannotated,
             reduction = "umap", 
             features = "Ttr") + 
@@ -467,7 +467,7 @@ VlnPlot(mouse.unannotated,
         split.by = "seurat_clusters")
 ```
 
-## Cluster 1: ??
+## Cluster 1:
 ```{r cluster1}
 VlnPlot(mouse.unannotated,
         features = cluster1$gene[1:20],
@@ -497,7 +497,7 @@ VlnPlot(mouse.unannotated,
         split.by = "seurat_clusters")
 ```
 
-## Cluster 4: Endothelial
+## Cluster 4:
 ```{r cluster4}
 VlnPlot(mouse.unannotated,
         features = cluster4$gene[1:20],
@@ -507,7 +507,7 @@ VlnPlot(mouse.unannotated,
         split.by = "seurat_clusters")
 ```
 
-## Cluster 5: ???
+## Cluster 5:
 ```{r cluster5, echo=FALSE, eval=FALSE}
 VlnPlot(mouse.unannotated,
         features = cluster5$gene[1:20],
@@ -517,7 +517,7 @@ VlnPlot(mouse.unannotated,
         split.by = "seurat_clusters")
 ```
 
-## Cluster 6: Fibroblasts
+## Cluster 6:
 ```{r cluster6, message=FALSE}
 VlnPlot(mouse.unannotated,
         features = cluster6$gene[1:20],
@@ -537,7 +537,7 @@ VlnPlot(mouse.unannotated,
         split.by = "seurat_clusters")
 ```
 
-## Cluster 8: Choroid
+## Cluster 8:
 ```{r cluster8}
 VlnPlot(mouse.unannotated,
         features = cluster8$gene[1:20],
@@ -547,7 +547,7 @@ VlnPlot(mouse.unannotated,
         split.by = "seurat_clusters")
 ```
 
-## Cluster 9:  ? neurons ?
+## Cluster 9: Fibroblasts
 ```{r cluster9}
 VlnPlot(mouse.unannotated,
         features = cluster9$gene[1:20],
@@ -577,7 +577,7 @@ VlnPlot(mouse.unannotated,
         split.by = "seurat_clusters")
 ```
 
-## Cluster 12: 
+## Cluster 12: Endothelial
 ```{r cluster12}
 VlnPlot(mouse.unannotated,
         features = cluster12$gene[1:20],
@@ -591,6 +591,16 @@ VlnPlot(mouse.unannotated,
 ```{r cluster13}
 VlnPlot(mouse.unannotated,
         features = cluster13$gene[1:20],
+        cols = cluster_colors,
+        stack = TRUE,
+        flip = TRUE,
+        split.by = "seurat_clusters")
+```
+
+## Cluster 15: Endothelial?
+```{r cluster15}
+VlnPlot(mouse.unannotated,
+        features = cluster15$gene[1:20],
         cols = cluster_colors,
         stack = TRUE,
         flip = TRUE,

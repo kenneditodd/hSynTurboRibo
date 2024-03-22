@@ -115,22 +115,29 @@ if (file.exists("../../rObjects/annotation.rds")) {
 ```{r add_metadata_columns}
 # read meta
 meta <- read.delim2("../../refs/mika_meta.tsv", sep = "\t")
-colnames(meta) <- c("sample","cohort","genotype","sex","i7_index","i5_index")
+colnames(meta) <- c("sequence_id","cohort","genotype","sex","i7_index","i5_index")
+meta$mouse_id <- as.numeric(str_match(meta$sequence_id, "PP_([0-9]+)")[,2])
+meta$sample <- paste(meta$genotype, meta$sex, meta$mouse_id, sep = ".")
+meta$sample <- gsub("Female","F",meta$sample)
+meta$sample <- gsub("Male","M",meta$sample)
 
 # parse sample
 barcodes <- colnames(mouse)
 pattern <- "(.+)_[ACGT]+-(\\d+)"
-sample <- str_match(barcodes, pattern)[,2]
-table(sample)
-mouse$sample <- factor(sample)
+sequence.id <- str_match(barcodes, pattern)[,2]
+table(sequence.id)
+mouse$sequence_id <- factor(sequence.id)
 
 # join meta tables
 mouse.meta <- mouse@meta.data
 mouse.meta$barcodes <- rownames(mouse.meta)
-mouse.meta <- left_join(mouse.meta, meta, by = "sample")
+mouse.meta <- left_join(mouse.meta, meta, by = "sequence_id")
 rownames(mouse.meta) <- mouse.meta$barcodes
 mouse@meta.data <- mouse.meta
 remove(meta,mouse.meta)
+
+# Set new idents
+Idents(mouse) <- "sample"
 
 # cell.complexity
 mouse$cell.complexity <- log10(mouse$nFeature_RNA) / log10(mouse$nCount_RNA)
