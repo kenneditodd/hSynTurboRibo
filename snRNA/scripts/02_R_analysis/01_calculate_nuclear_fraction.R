@@ -4,7 +4,6 @@
 
 # load libraries
 library(DropletQC, lib.loc = "/home/mayo/m214960/R/x86_64-pc-linux-gnu-library/4.2")
-setwd(".")
 
 # nuclear fraction = # intronic reads / (# intronic reads + # of exonic reads) 
 # The nuclear_fraction_tag() function uses Cell Ranger's output BAM file to 
@@ -19,10 +18,12 @@ sample <- args[1]
 print(sample)
 
 # calculate nuclear fraction using BAM tags
-dir <- paste0("../../counts/", sample, "/outs/")
-tags <- nuclear_fraction_tags(outs = dir, cores = 30, verbose = TRUE)
+prefix <- "/research/labs/neurology/fryer/m214960/hSynTurboRibo/snRNA/counts/"
+dir <- paste0(prefix, sample, "/outs")
+tags <- nuclear_fraction_tags(outs = dir, cores = 15, verbose = TRUE)
 
 # save
-write.table(wt.tags, 
-            file = paste0("../../refs/", sample, "_nuclear_fraction.tsv"),
+prefix <- "/research/labs/neurology/fryer/m214960/hSynTurboRibo/snRNA/refs/"
+write.table(tags, 
+            file = paste0(prefix, sample, "_nuclear_fraction.tsv"),
             quote = FALSE, sep = "\t", col.names = TRUE, row.names = TRUE)

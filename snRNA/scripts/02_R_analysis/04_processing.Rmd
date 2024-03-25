@@ -162,6 +162,26 @@ ribo.combined
 hb.genes <- gene.names[grep("^Hb[ba]-", gene.names)]
 mouse$percent.hb <- PercentageFeatureSet(mouse, features = hb.genes)
 hb.genes
+
+# nuclear fraction
+# init
+samples <- c("PP_4","PP_11","PP_13","PP_14","PP_15","PP_19","PP_22","PP_23")
+prefix <- "../../refs/"
+all.barcodes <- NULL
+all.nuc.frac <- NULL
+# loop
+for (sample in samples) {
+  file <- read_tsv(paste0(prefix, sample, "_nuclear_fraction.tsv"), 
+                   col_names = FALSE, skip = 1)
+  colnames(file) <- c("barcode","nuclear_fraction")
+  file$barcode <- paste0(sample, "_", file$barcode)
+  all.barcodes <- c(all.barcodes, file$barcode)
+  all.nuc.frac <- c(all.nuc.frac, file$nuclear_fraction)
+}
+# add
+all.equal(rownames(mouse@meta.data), all.barcodes)
+mouse$nuclear_fraction <- all.nuc.frac * 100
+remove(file)
 ```
 
 # Pre-filtering QC

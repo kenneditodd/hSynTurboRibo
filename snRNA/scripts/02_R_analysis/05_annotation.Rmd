@@ -92,6 +92,16 @@ u3 <- DimPlot(object = mouse.unannotated,
               group.by = "sample",
               cols = sample_colors)
 u3
+
+u4 <- DimPlot(object = mouse.unannotated,
+              reduction = "umap",
+              shuffle = TRUE,
+              repel = TRUE,
+              raster = FALSE,
+              ncol = 3,
+              split.by = "sample",
+              cols = cluster_colors)
+u4
 ```
 
 ```{r save_unannotated_umap, echo=FALSE}
@@ -104,10 +114,21 @@ u3
 path <- paste0("../../results/UMAP/unannotated_clusters_colored_by_sample")
 saveToPDF(paste0(path, ".pdf"), width = 6, height = 4)
 dev.off()
+
+u4
+path <- paste0("../../results/UMAP/unannotated_clusters_colored_by_cluster_split_by_sample")
+saveToPDF(paste0(path, ".pdf"), width = 10, height = 10)
+dev.off()
 ```
 
 ## Feature plots
 ```{r feature_plots_unannotated, message=FALSE, warning=FALSE}
+# UMAP nuclear.fraction
+FeaturePlot(mouse.unannotated,
+            reduction = "umap", 
+            features = "Gabra6") + 
+  scale_colour_gradientn(colours = c("blue","lightblue","yellow","orange","red"))
+
 # UMAP percent.mt
 FeaturePlot(mouse.unannotated,
             reduction = "umap", 
@@ -453,7 +474,6 @@ cluster14 <- all.markers[all.markers$cluster == 14,]
 cluster15 <- all.markers[all.markers$cluster == 15,]
 cluster16 <- all.markers[all.markers$cluster == 16,]
 cluster17 <- all.markers[all.markers$cluster == 17,]
-cluster18 <- all.markers[all.markers$cluster == 18,]
 ```
 
 # Cluster Annotations

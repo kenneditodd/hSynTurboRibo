@@ -1,11 +1,12 @@
 #!/bin/sh
 #SBATCH --job-name submit_Rscript
-#SBATCH --mem 10G
+#SBATCH --mem 20G
 #SBATCH --output logs/%x.%j.stdout
 #SBATCH --error logs/%x.%j.stderr
-#SBATCH --partition cpu-med
-#SBATCH --tasks 30
+#SBATCH --partition cpu-short
+#SBATCH --tasks 15
 #SBATCH --time 08:00:00 ## HH:MM:SS
+#SBATCH --propagate=NONE
 
 # init
 source $HOME/.bash_profile
