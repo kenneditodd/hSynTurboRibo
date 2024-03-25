@@ -26,9 +26,10 @@ header = '''{{
     "genomeDir" : "refs/starGenomeDir/",
 
     "FILES",
-    "Mmusculus.gtf" : "/research/labs/neurology/fryer/projects/references/mouse/PS19_refdata-gex-mm10-2020-A/genes/genes.gtf",
-    "Mmusculus.fa" : "/research/labs/neurology/fryer/projects/references/mouse/PS19_refdata-gex-mm10-2020-A/fasta/genome.fa",
-    "TgMAPT.fa" : "/research/labs/neurology/fryer/projects/references/mouse/PS19_refdata-gex-mm10-2020-A/fasta/MAPT_transgene.fa",
+    "Mmusculus.gtf" : "/research/labs/neurology/fryer/projects/references/mouse/PS19_TurboRibo_refdata-gex-mm10-2020-A/genes/genes.gtf",
+    "Mmusculus.fa" : "/research/labs/neurology/fryer/projects/references/mouse/PS19_TurboRibo_refdata-gex-mm10-2020-A/fasta/genome.fa",
+    "TgMAPT.fa" : "/research/labs/neurology/fryer/projects/references/mouse/PS19_TurboRibo_refdata-gex-mm10-2020-A/fasta/MAPT_transgene.fa",
+    "TurboRibo.fa" : "/research/labs/neurology/fryer/projects/references/mouse/PS19_TurboRibo_refdata-gex-mm10-2020-A/fasta/turbo_ribo_construct.fa",
 
     "SAMPLE INFORMATION",
     "allSamples": {0},
