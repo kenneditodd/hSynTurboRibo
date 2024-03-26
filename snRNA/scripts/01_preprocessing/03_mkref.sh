@@ -14,13 +14,11 @@ source $HOME/.bash_profile
 # get cellranger version
 cellranger -V
 
-# set ref path
-ref=/research/labs/neurology/fryer/projects/references/mouse/PS19_TurboRibo_refdata-gex-mm10-2020-A
-
 # make new ref
 # refdata-gex-mm10-2020-A with TurboRibo and TgMAPT added
+cd /research/labs/neurology/fryer/projects/references/mouse/PS19_TurboRibo_refdata-gex-mm10-2020-A
 cellranger mkref \
-    --genome=$ref/cellrangerGenomeDir \
-    --fasta=$ref/fasta/genome_TgMAPT_TurboRibo.fa \
-    --genes=$ref/genes/genes.gtf \
+    --genome=cellrangerGenomeDir \
+    --fasta=fasta/genome_TgMAPT_TurboRibo.fa \
+    --genes=genes/genes.gtf \
     --nthreads=20
