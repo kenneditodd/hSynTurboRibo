@@ -21,8 +21,6 @@ ref=/research/labs/neurology/fryer/projects/references/mouse/PS19_TurboRibo_refd
 # refdata-gex-mm10-2020-A with TurboRibo and TgMAPT added
 cellranger mkref \
     --genome=$ref/cellrangerGenomeDir \
-    --fasta=$ref/fasta/genome.fa \
-    --fasta=$ref/fasta/MAPT_transgene.fa \
-    --fasta=$ref/fasta/turbo_ribo_construct.fa \
+    --fasta=$ref/fasta/genome_TgMAPT_TurboRibo.fa \
     --genes=$ref/genes/genes.gtf \
     --nthreads=20

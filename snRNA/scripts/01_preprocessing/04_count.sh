@@ -28,7 +28,7 @@ cellranger count \
 	--id=$id \
 	--sample=$sample \
 	--fastqs=$fastqs \
-	--transcriptome=/research/labs/neurology/fryer/projects/references/mouse/refdata-gex-mm10-2020-A \
+	--transcriptome=/research/labs/neurology/fryer/projects/references/mouse/PS19_TurboRibo_refdata-gex-mm10-2020-A/cellrangerGenomeDir \
 	--localcores=20 \
 	--localmem=75
 

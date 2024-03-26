@@ -22,10 +22,8 @@ do
   fastqs=$(echo $prefix | sed -s 's/\(.*RawData\/PP.*\)\/.*/\1/')
   
   # pass to script
-  sbatch 03_count.sh $id $sample $fastqs
+  sbatch 04_count.sh $id $sample $fastqs
 done
 
-#works
-#cellranger count --id=PP_14 --sample=PP_14_CKDL240007382-1A_H2T5GDSXC --fastqs=/research/labs/neurology/fryer/projects/hSynTurboRibo/PS19_P0_snRNAseq/01.RawData/PP_14 --transcriptome=/research/labs/neurology/fryer/projects/references/mouse/refdata-gex-mm10-2020-A
 # cleanup
 rm R1_prefix.txt
